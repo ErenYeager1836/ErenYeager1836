@@ -32,7 +32,7 @@ const sectionName = "MAIN_LANGUAGES";
 ```ts
 const sectionName = "SYSTEMS_&_LOW_LEVEL";
 ```
-[![Systems & Low Level](https://go-skill-icons.vercel.app/api/icons?i=c,cpp,assembly,cmake,windows,linux,git)](#)
+[![Systems & Low Level](https://go-skill-icons.vercel.app/api/icons?i=c,cpp,assembly,cmake,windows,linux,arch,git)](#)
 ```ts
 const sectionName = "TOOLS_&_PLATFORMS";
 ```
