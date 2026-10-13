@@ -28,7 +28,7 @@ const sectionName = "AI";
 ```ts
 const sectionName = "MAIN_LANGUAGES";
 ```
-[![Main Languages](https://skillicons.dev/icons?i=cpp,c,python,bash,powershell,assembly,cmake)](#)
+[![Main Languages](https://go-skill-icons.vercel.app/api/icons?i=cpp,c,python,bash,powershell,assembly,cmake)](#)
 ```ts
 const sectionName = "SYSTEMS_&_LOW_LEVEL";
 ```
