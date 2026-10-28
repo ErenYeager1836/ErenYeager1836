@@ -12,23 +12,23 @@ Systems & Application Security Engineer | C++17/20, Linux Kernel, Vulkan, SAST |
 
 ---
 
-## 2. About Section
+## 2. About Section (2,454 Characters — Within 2,600 Limit)
 
 ```markdown
-I am a Systems and Application Security Engineer specializing in low-level modern C++17/20, Linux kernel subsystems, binary ABI emulation, and Static Application Security Testing (SAST). 
+I am a Systems and Application Security Engineer specializing in low-level modern C++17/20, Linux kernel subsystems, binary ABI emulation, and Static Application Security Testing (SAST).
 
-Originally trained in Materials Science & Engineering at the College of Engineering, Guindy (CEG), Anna University, I bring a first-principles, hardware-aware mindset to software architecture—focusing on memory bus dynamics, cache-line saturation, concurrency safety, and compiler-level AST analysis.
+Trained in Materials Science & Engineering at the College of Engineering, Guindy (CEG), Anna University, I bring a first-principles, hardware-aware approach to software—focusing on memory bus dynamics, cache-line saturation, concurrency safety, and compiler AST analysis.
 
 🚀 Upstream Open-Source Impact:
-• ValveSoftware/gamescope: Diagnosed Vulkan 1.3 NV12 multi-planar storage image validation and DRM format modifier stride alignment on NVIDIA proprietary drivers, resolving video stream corruption during Steam Remote Play.
-• ValveSoftware/Proton: Resolved Linux filesystem case-sensitivity collisions in DriverStore path lookups and file descriptor lifecycles for Windows binary translation.
-• Linux Kernel (Staging/IIO): Refactored multi-branch error-path lock handling in the AD5933 impedance analyzer driver to scoped RAII guard(mutex) semantics (<linux/cleanup.h>), eliminating lock-leakage deadlocks.
-• boykopovar/AnyPS5: Implemented runtime module lifecycle tracking (sceSysmoduleIsLoadedInternal - merged upstream) and audited 12,000+ PRX exports against strict automated Python AST header invariants.
+• Valve / gamescope: Diagnosed Vulkan 1.3 NV12 multi-planar storage image validation and DRM modifier alignment on NVIDIA drivers, fixing Steam Remote Play video corruption.
+• Valve / Proton: Resolved Linux filesystem case-sensitivity collisions in DriverStore path lookups and file descriptor lifecycles for Windows binary translation.
+• Linux Kernel (Staging/IIO): Refactored multi-branch error-path lock handling in the AD5933 driver to scoped RAII guard(mutex) semantics (<linux/cleanup.h>), eliminating lock-leakage deadlocks.
+• AnyPS5: Implemented module lifecycle tracking (sceSysmoduleIsLoadedInternal - merged) and audited 12,000+ PRX exports against automated Python AST header invariants.
 
 🛠️ Core Engineered Systems:
 • ast-guard: Lightweight Python AST SAST scanner emitting native OASIS SARIF 2.1.0 telemetry for GitHub Code Scanning; scans 100k+ LOC in <1.2s with zero regex false positives (published as a GitHub Action: ErenYeager1836/ast-guard@v1).
-• In-Memory Key-Value Store: 64-shard lock-striped in-memory database in C++17; sustained 425,000+ ops/sec at <0.18ms p99 latency across 16 threads with zero memory leaks verified under Valgrind, ASan, and TSan.
-• game-dev-labs: Data-Oriented Design (DoD) C++17 engine suite featuring a Sparse Set Entity Component System (ECS) processing 50k entities in <0.82ms, SAT 2D physics solver, and deterministic fixed-timestep game loops.
+• In-Memory Key-Value Store: 64-shard lock-striped in-memory database in C++17; sustained 425,000+ ops/sec at <0.18ms p99 latency across 16 threads with zero memory leaks under Valgrind, ASan, and TSan.
+• game-dev-labs: Data-Oriented Design (DoD) C++17 engine suite featuring a Sparse Set ECS processing 50k entities in <0.82ms, SAT 2D physics solver, and deterministic fixed-timestep game loops.
 • secret-scanner: High-throughput credential auditor using Shannon entropy heuristics (H >= 3.2) across Git DAG commit histories at ~85 MB/s with full output masking.
 
 Technical Core: Modern C++17/20, C, Python 3, Linux Kernel Subsystems, Concurrency (pthreads, shared_mutex, lock striping), Vulkan 1.3, POSIX Sockets, Static Analysis (AST, SARIF 2.1.0), Threat Modeling, Sanitizers (ASan/UBSan/TSan), CMake, Docker.
