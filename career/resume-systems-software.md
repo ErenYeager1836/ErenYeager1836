@@ -51,5 +51,6 @@ Systems Software Engineer specializing in modern C++17/20, Linux kernel subsyste
 
 ---
 
-### EDUCATION & CERTIFICATIONS
-* **Bachelor of Technology (B.Tech) in Computer Science & Engineering**
+### EDUCATION
+* **Bachelor of Engineering (B.E.) in Materials Science and Engineering**  
+  College of Engineering, Guindy (CEG), Anna University, Chennai
