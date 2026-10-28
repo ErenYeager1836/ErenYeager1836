@@ -1,6 +1,6 @@
 # Nithishvelan M
 **Game Systems & Engine Programmer**  
-Chennai, India | [mnithishvelan@gmail.com](mailto:mnithishvelan@gmail.com) | [github.com/ErenYeager1836](https://github.com/ErenYeager1836) | [linkedin.com/in/nithishvelan](https://linkedin.com/in/nithishvelan)
+Chennai, India | [mnithishvelan@gmail.com](mailto:mnithishvelan@gmail.com) | [github.com/ErenYeager1836](https://github.com/ErenYeager1836) | [linkedin.com/in/nithishvelan-m-096847263](https://www.linkedin.com/in/nithishvelan-m-096847263/)
 
 ---
 

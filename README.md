@@ -4,7 +4,7 @@
 Specializing in C++17/20, Linux Kernel Subsystems, Binary ABI Emulation, and Static Application Security Testing (SAST).
 
 [![GitHub](https://img.shields.io/badge/GitHub-ErenYeager1836-181717?style=flat&logo=github)](https://github.com/ErenYeager1836)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Nithishvelan--M-0A66C2?style=flat&logo=linkedin)](https://linkedin.com/in/nithishvelan)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Nithishvelan--M-0A66C2?style=flat&logo=linkedin)](https://www.linkedin.com/in/nithishvelan-m-096847263/)
 [![Email](https://img.shields.io/badge/Email-mnithishvelan%40gmail.com-D14836?style=flat&logo=gmail)](mailto:mnithishvelan@gmail.com)
 
 ---
