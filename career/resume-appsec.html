@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>resume-appsec</title>
+<style>
+@page {
+    size: letter;
+    margin: 0.3in 0.4in 0.28in 0.4in;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 8.2pt;
+    line-height: 1.25;
+    color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-size: 15pt;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 1px 0;
+    color: #0f172a;
+}
+p {
+    margin: 1.5px 0 2.5px 0;
+}
+.header {
+    text-align: center;
+    margin-bottom: 3px;
+    border-bottom: 1.5px solid #0f172a;
+    padding-bottom: 3px;
+}
+.header h1 {
+    margin: 0;
+}
+.header .title {
+    font-size: 9.5pt;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin: 1px 0;
+}
+.header .contact {
+    font-size: 8pt;
+    color: #475569;
+}
+.header .contact a {
+    color: #1d4ed8;
+    text-decoration: none;
+}
+h3 {
+    font-size: 8.5pt;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #0f172a;
+    border-bottom: 1px solid #cbd5e1;
+    padding-bottom: 1px;
+    margin: 4px 0 2px 0;
+}
+h4 {
+    font-size: 8.3pt;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 3px 0 1px 0;
+}
+ul {
+    margin: 1px 0 2.5px 0;
+    padding-left: 12px;
+}
+li {
+    margin-bottom: 1.2px;
+}
+p.sub-item {
+    margin: 1px 0 1.5px 12px;
+    color: #334155;
+}
+code {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 7.8pt;
+    background: #f1f5f9;
+    padding: 0.5px 2px;
+    border-radius: 2px;
+    color: #0f172a;
+}
+strong {
+    font-weight: 700;
+    color: #0f172a;
+}
+em {
+    font-style: italic;
+    color: #334155;
+}
+a {
+    color: #1d4ed8;
+    text-decoration: none;
+}
+hr {
+    display: none;
+}
+</style>
+</head>
+<body>
+<div class=\"header\"><h1>Nithishvelan M</h1><div class=\"title\">Application Security & DevSecOps Engineer</div><div class=\"contact\">Chennai, India | <a href=\"mailto:mnithishvelan@gmail.com\">mnithishvelan@gmail.com</a> | <a href=\"https://github.com/ErenYeager1836\">github.com/ErenYeager1836</a> | <a href=\"https://www.linkedin.com/in/nithishvelan-m-096847263/\">linkedin.com/in/nithishvelan-m-096847263</a></div></div>
+<hr>
+<h3>PROFESSIONAL SUMMARY</h3>
+<p>Application Security & Systems Engineer specializing in Static Application Security Testing (SAST), Abstract Syntax Tree (AST) analysis, security telemetry (OASIS SARIF 2.1.0), and automated vulnerability gating. Upstream open-source contributor to the Linux Kernel and security advisory databases. Experienced in developing custom security scanning engines, Shannon entropy credential detectors, and DevSecOps CI/CD pipelines.</p>
+<hr>
+<h3>CORE TECHNICAL SKILLS</h3>
+<ul>
+<li><strong>Security & SAST:</strong> Static Application Security Testing (SAST), AST Traversal, OASIS SARIF 2.1.0, Threat Modeling (STRIDE), Shannon Entropy Heuristics, OWASP Top 10, CWE Mapping, Zero-Leakage Data Masking.</li>
+<li><strong>Languages & Systems:</strong> Python 3, C++17/20, C, Bash/POSIX Shell, SQL, Git Internals.</li>
+<li><strong>DevSecOps & Tooling:</strong> GitHub Actions CI/CD, Docker, Pre-Commit Framework, Flake8, Pytest, Valgrind, Linux Security Modules.</li>
+</ul>
+<hr>
+<h3>UPSTREAM OPEN SOURCE SECURITY CONTRIBUTIONS</h3>
+<ul>
+<li><strong>Linux Kernel (<code>drivers/staging/iio/ad5933.c</code>)</strong> — <em>Kernel Concurrency & Lock Modernization</em></li>
+<li>Refactored multi-branch error-path mutex handling in the AD5933 impedance analyzer driver to use RAII <code>guard(mutex)</code> (<code><linux/cleanup.h></code>), structurally eliminating lock-leakage deadlocks.</li>
+<li>Formatted and submitted patches adhering strictly to LKML conventions via <code>git send-email</code> to upstream subsystem maintainers (Jonathan Cameron, Greg Kroah-Hartman).</li>
+<li><strong>GitHub Advisory Database (<code>github/advisory-database</code>)</strong> — <em>Security Advisory Research</em></li>
+<li>Audited and contributed vulnerability scope documentation improvements and metadata clarification for published CVE advisories.</li>
+<li><strong>boykopovar/AnyPS5</strong> — <em>Static Analysis & Header Invariant Enforcement</em></li>
+<li>Resolved duplicate symbol declaration failures detected by Python AST static analysis (<code>public_headers</code>), ensuring single-source-of-truth export hygiene across 12,000+ virtual ABI symbols.</li>
+</ul>
+<hr>
+<h3>FEATURED SECURITY PROJECTS</h3>
+<h4><strong>ast-guard</strong> — *AST-Based Static Application Security Testing Engine & GitHub Action*</h4>
+<ul>
+<li>Engineered a lightweight Python AST SAST scanner analyzing code structures via <code>ast.NodeVisitor</code> with <strong>0% comment/docstring false-positive rates</strong> compared to regex linters.</li>
+<li>Emits native <strong>OASIS SARIF 2.1.0</strong> telemetry, enabling automated security alerts within GitHub Code Scanning and PR annotation gates.</li>
+<li>Benchmarked against 100,000+ LOC codebases; executes full security rule evaluation in <strong><code>< 1.2 seconds</code></strong> with <code>< 48MB</code> RSS memory overhead.</li>
+<li>Published as a reusable Composite <strong>GitHub Action</strong> (<code>ErenYeager1836/ast-guard@v1</code>) with configurable severity gates (<code>--fail-on HIGH</code>).</li>
+<li>Authored <strong>ADR 0001: AST Visitor Traversal vs. Regular Expression Pattern Matching</strong>.</li>
+</ul>
+<h4><strong>secret-scanner</strong> — *High-Entropy Credential Detection CLI & Git History Auditor*</h4>
+<ul>
+<li>Built an automated secret scanner implementing <strong>Shannon entropy heuristics</strong> ($H \ge 3.2$) alongside regex pattern matching to detect unpatterned API tokens and cryptographic keys.</li>
+<li>Implemented full Git DAG history inspection (<code>git log -p</code>), detecting leaked credentials retroactively deleted in subsequent commits.</li>
+<li>Enforced <strong>guaranteed dynamic masking</strong> to prevent cleartext secret leakage across stdout and JSON output artifacts.</li>
+<li>Benchmarked sustained filesystem scan throughput at <strong><code>~85 MB/s</code></strong> with <code>< 42MB</code> memory footprint.</li>
+</ul>
+<h4><strong>reconflow</strong> — *Modular Security Reconnaissance CLI (Published on PyPI)*</h4>
+<ul>
+<li>Developed a multi-threaded reconnaissance tool orchestrating passive DNS enumeration, subdomain discovery, and live HTTP probing.</li>
+<li>Selected and indexed by the <strong>XERJ Corpus Hub</strong> as an open-source reference implementation for AI coding agents.</li>
+</ul>
+<h4><strong>security-labs</strong> — *Defensive Security & Vulnerability Simulation Suite*</h4>
+<ul>
+<li>Developed socket-level port scanners, authentication log analyzers, and automated Linux host hardening auditing scripts.</li>
+<li>Configured an intentionally vulnerable multi-tier test lab in Docker demonstrating SQLi, IDOR, and privilege escalation defenses.</li>
+</ul>
+<hr>
+<h3>EDUCATION</h3>
+<ul>
+<li><strong>Bachelor of Engineering (B.E.) in Materials Science and Engineering</strong></li>
+<p class="sub-item">College of Engineering, Guindy (CEG), Anna University, Chennai</p>
+</ul>
+</body>
+</html>

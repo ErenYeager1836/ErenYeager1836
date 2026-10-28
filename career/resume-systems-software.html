@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>resume-systems-software</title>
+<style>
+@page {
+    size: letter;
+    margin: 0.3in 0.4in 0.28in 0.4in;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 8.2pt;
+    line-height: 1.25;
+    color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-size: 15pt;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 1px 0;
+    color: #0f172a;
+}
+p {
+    margin: 1.5px 0 2.5px 0;
+}
+.header {
+    text-align: center;
+    margin-bottom: 3px;
+    border-bottom: 1.5px solid #0f172a;
+    padding-bottom: 3px;
+}
+.header h1 {
+    margin: 0;
+}
+.header .title {
+    font-size: 9.5pt;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin: 1px 0;
+}
+.header .contact {
+    font-size: 8pt;
+    color: #475569;
+}
+.header .contact a {
+    color: #1d4ed8;
+    text-decoration: none;
+}
+h3 {
+    font-size: 8.5pt;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #0f172a;
+    border-bottom: 1px solid #cbd5e1;
+    padding-bottom: 1px;
+    margin: 4px 0 2px 0;
+}
+h4 {
+    font-size: 8.3pt;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 3px 0 1px 0;
+}
+ul {
+    margin: 1px 0 2.5px 0;
+    padding-left: 12px;
+}
+li {
+    margin-bottom: 1.2px;
+}
+p.sub-item {
+    margin: 1px 0 1.5px 12px;
+    color: #334155;
+}
+code {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 7.8pt;
+    background: #f1f5f9;
+    padding: 0.5px 2px;
+    border-radius: 2px;
+    color: #0f172a;
+}
+strong {
+    font-weight: 700;
+    color: #0f172a;
+}
+em {
+    font-style: italic;
+    color: #334155;
+}
+a {
+    color: #1d4ed8;
+    text-decoration: none;
+}
+hr {
+    display: none;
+}
+</style>
+</head>
+<body>
+<div class=\"header\"><h1>Nithishvelan M</h1><div class=\"title\">Systems Software Engineer</div><div class=\"contact\">Chennai, India | <a href=\"mailto:mnithishvelan@gmail.com\">mnithishvelan@gmail.com</a> | <a href=\"https://github.com/ErenYeager1836\">github.com/ErenYeager1836</a> | <a href=\"https://www.linkedin.com/in/nithishvelan-m-096847263/\">linkedin.com/in/nithishvelan-m-096847263</a></div></div>
+<hr>
+<h3>PROFESSIONAL SUMMARY</h3>
+<p>Systems Software Engineer specializing in modern C++17/20, Linux kernel subsystems, multi-threaded concurrency, low-latency in-memory data structures, and cross-platform POSIX networking. Upstream contributor to the Linux Kernel, Valve’s Linux infrastructure (<code>gamescope</code>, <code>Proton</code>), and binary compatibility runtimes (<code>AnyPS5</code>). Demonstrated expertise in lock-striping optimization, memory profiling, and building production-hardened systems with automated multi-OS CI/CD matrices.</p>
+<hr>
+<h3>CORE TECHNICAL SKILLS</h3>
+<ul>
+<li><strong>Languages & Compilers:</strong> C++17, C++20, C, Python 3, POSIX Bash, Clang/LLVM, GCC, MSVC, CMake.</li>
+<li><strong>Concurrency & Systems:</strong> Multi-threading (pthreads/<code>std::thread</code>), Reader-Writer Locks (<code>std::shared_mutex</code>), Lock Striping, Atomics, RAII Resource Management, Memory Alignment & Cache Coherency, POSIX Sockets, Winsock2.</li>
+<li><strong>Linux Kernel & Low-Level:</strong> Linux Driver Architecture, <code><linux/cleanup.h></code>, Scoped Guards, Virtual ABI (<code>APS5_VABI</code>), ELF Binary Structure, Memory Profiling (Valgrind Massif/Memcheck), Google Benchmark.</li>
+<li><strong>Quality & CI/CD:</strong> AddressSanitizer (ASan), UndefinedBehaviorSanitizer (UBSan), ThreadSanitizer (TSan), GitHub Actions Matrix (Ubuntu, Windows, macOS), Docker.</li>
+</ul>
+<hr>
+<h3>UPSTREAM OPEN SOURCE SYSTEMS CONTRIBUTIONS</h3>
+<ul>
+<li><strong>Linux Kernel (<code>drivers/staging/iio/impedance-analyzer/ad5933.c</code>)</strong> — <em>Kernel Locking Modernization</em></li>
+<li>Refactored multi-branch lock handling in the AD5933 impedance analyzer driver to scoped RAII <code>guard(mutex)</code> semantics, structurally preventing mutex leakage across error exits.</li>
+<li>Formatted, checked (<code>checkpatch.pl --strict</code>), and submitted patches to subsystem maintainers via <code>git send-email</code>.</li>
+<li><strong>ValveSoftware/gamescope</strong> — <em>Linux Display Compositor & Multi-Planar Memory</em></li>
+<li>Resolved Vulkan 1.3 NV12 storage image format verification and DRM modifier stride negotiation on NVIDIA proprietary drivers, restoring real-time frame streaming across PipeWire and NVENC.</li>
+<li><strong>ValveSoftware/Proton</strong> — <em>Wine Compatibility Runtime & POSIX Filesystem</em></li>
+<li>Corrected DriverStore directory case-handling and file descriptor leakages to prevent Linux filesystem case collisions during Windows DLL resolution.</li>
+<li><strong>boykopovar/AnyPS5</strong> — <em>PlayStation 5 Runtime Translation Layer</em></li>
+<li>Implemented <code>sceSysmoduleIsLoadedInternal</code> lifecycle state tracking (<em>merged upstream</em>), implemented FreeBSD <code>tgammaf</code> precision routines, and audited PRX stubs against automated Python AST header verification.</li>
+</ul>
+<hr>
+<h3>FEATURED SYSTEMS & BACKEND PROJECTS</h3>
+<h4><strong>mini-projects (Systems Lab)</strong> — *In-Memory Key-Value Store & Distributed Primitives (C++17)*</h4>
+<ul>
+<li><strong>Lock-Striped In-Memory Storage Engine:</strong></li>
+<li>Engineered a multi-threaded in-memory key-value database in C++17 featuring a custom text protocol, passive retrieval expiration, and active background sweep threads.</li>
+<li>Implemented <strong>64-shard lock-striped hash partitioning</strong> (<a href=\"https://github.com/ErenYeager1836/mini-projects/blob/main/kv-store/docs/adr/0001-lock-striping-vs-global-mutex.md\">ADR 0001</a>), eliminating global mutex lock convoying.</li>
+<li>Benchmarked via Google Benchmark: sustained <strong><code>425,000+ ops/sec</code></strong> at <strong><code>< 0.18ms p99 latency</code></strong> under 16 concurrent threads.</li>
+<li>Designed atomic Append-Only File (AOF) snapshotting utilizing length-prefixed serialization and filesystem rename primitives (<code>fs::rename</code>) for crash consistency.</li>
+<li><strong>High-Throughput Rate Limiting & Task Queue:</strong></li>
+<li>Implemented sliding-window rate limiters with millisecond timestamp precision and an asynchronous worker pool handling concurrent tasks.</li>
+<li><strong>Memory Safety & CI Pipeline:</strong></li>
+<li>Validated zero memory leaks (<code>0 bytes in 0 blocks lost</code>) under Valgrind Memcheck.</li>
+<li>Built an automated GitHub Actions CI matrix validating builds across <strong>Ubuntu, Windows, and macOS</strong> with AddressSanitizer (ASan) and UndefinedBehaviorSanitizer (UBSan).</li>
+</ul>
+<h4><strong>secret-scanner</strong> — *High-Throughput Entropy Scanning Engine*</h4>
+<ul>
+<li>Implemented mathematical Shannon entropy heuristics ($H \ge 3.2$) across sliding character buffers to detect cryptographic secrets.</li>
+<li>Scanned Git commit DAG histories at <strong><code>~85 MB/s</code></strong> with <code>< 42MB</code> memory footprint, ensuring full output masking.</li>
+</ul>
+<hr>
+<h3>EDUCATION</h3>
+<ul>
+<li><strong>Bachelor of Engineering (B.E.) in Materials Science and Engineering</strong></li>
+<p class="sub-item">College of Engineering, Guindy (CEG), Anna University, Chennai</p>
+</ul>
+</body>
+</html>

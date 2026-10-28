@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>resume-game-systems</title>
+<style>
+@page {
+    size: letter;
+    margin: 0.3in 0.4in 0.28in 0.4in;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 8.2pt;
+    line-height: 1.25;
+    color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-size: 15pt;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 1px 0;
+    color: #0f172a;
+}
+p {
+    margin: 1.5px 0 2.5px 0;
+}
+.header {
+    text-align: center;
+    margin-bottom: 3px;
+    border-bottom: 1.5px solid #0f172a;
+    padding-bottom: 3px;
+}
+.header h1 {
+    margin: 0;
+}
+.header .title {
+    font-size: 9.5pt;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin: 1px 0;
+}
+.header .contact {
+    font-size: 8pt;
+    color: #475569;
+}
+.header .contact a {
+    color: #1d4ed8;
+    text-decoration: none;
+}
+h3 {
+    font-size: 8.5pt;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #0f172a;
+    border-bottom: 1px solid #cbd5e1;
+    padding-bottom: 1px;
+    margin: 4px 0 2px 0;
+}
+h4 {
+    font-size: 8.3pt;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 3px 0 1px 0;
+}
+ul {
+    margin: 1px 0 2.5px 0;
+    padding-left: 12px;
+}
+li {
+    margin-bottom: 1.2px;
+}
+p.sub-item {
+    margin: 1px 0 1.5px 12px;
+    color: #334155;
+}
+code {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 7.8pt;
+    background: #f1f5f9;
+    padding: 0.5px 2px;
+    border-radius: 2px;
+    color: #0f172a;
+}
+strong {
+    font-weight: 700;
+    color: #0f172a;
+}
+em {
+    font-style: italic;
+    color: #334155;
+}
+a {
+    color: #1d4ed8;
+    text-decoration: none;
+}
+hr {
+    display: none;
+}
+</style>
+</head>
+<body>
+<div class=\"header\"><h1>Nithishvelan M</h1><div class=\"title\">Game Systems & Engine Programmer</div><div class=\"contact\">Chennai, India | <a href=\"mailto:mnithishvelan@gmail.com\">mnithishvelan@gmail.com</a> | <a href=\"https://github.com/ErenYeager1836\">github.com/ErenYeager1836</a> | <a href=\"https://www.linkedin.com/in/nithishvelan-m-096847263/\">linkedin.com/in/nithishvelan-m-096847263</a></div></div>
+<hr>
+<h3>PROFESSIONAL SUMMARY</h3>
+<p>Game Systems & Low-Level Programmer specializing in modern C++17/20, Data-Oriented Design (DoD), cache-friendly memory architectures (Sparse Sets), real-time 2D physics simulation, and graphics compositing. Open-source contributor to Valve’s Linux gaming infrastructure (<code>gamescope</code>, <code>Proton</code>) and PlayStation 5 translation tooling (<code>AnyPS5</code>). Experienced in designing deterministic game loops, SAT collision solvers, and low-latency rendering pipelines.</p>
+<hr>
+<h3>CORE TECHNICAL SKILLS</h3>
+<ul>
+<li><strong>Languages & Standards:</strong> C++17, C++20, C, Python 3, POSIX Shell, CMake.</li>
+<li><strong>Game Engine Architecture:</strong> Data-Oriented Design (DoD), Entity Component System (ECS), Sparse Sets, Cache Line Saturation, Fixed-Timestep Accumulators, State Machines (FSM).</li>
+<li><strong>Physics & Math:</strong> Separating Axis Theorem (SAT), Impulse-Based Collision Response, Minimum Translation Vectors (MTV), A* Pathfinding (Manhattan/Octile), Procedural Dungeon Generation (BSP).</li>
+<li><strong>Graphics & Systems:</strong> Vulkan 1.3, PipeWire, POSIX Sockets, Multi-threading, AddressSanitizer (ASan), UndefinedBehaviorSanitizer (UBSan), Valgrind.</li>
+</ul>
+<hr>
+<h3>UPSTREAM OPEN SOURCE GAME & COMPATIBILITY CONTRIBUTIONS</h3>
+<ul>
+<li><strong>ValveSoftware/gamescope</strong> — <em>Linux Gaming Session Compositor & Vulkan Pipeline</em></li>
+<li>Diagnosed and resolved video corruption during Steam Remote Play sessions on NVIDIA proprietary drivers by introducing multi-planar capability checks on NV12 storage images (<code>VK_IMAGE_USAGE_STORAGE_BIT</code>).</li>
+<li>Addressed DRM format modifier stride alignment issues when exchanging video frames across PipeWire and NVENC hardware encoders.</li>
+<li><strong>ValveSoftware/Proton</strong> — <em>Steam Play Windows Compatibility Tool (Wine)</em></li>
+<li>Resolved Linux case-sensitivity collisions during Windows DLL resolution by correcting DriverStore directory path lookups and file descriptor lifecycle management.</li>
+<li><strong>boykopovar/AnyPS5</strong> — <em>PlayStation 5 Systems PRX Translation Layer</em></li>
+<li>Implemented <code>sceSysmoduleIsLoadedInternal</code> lifecycle state tracking (<em>merged upstream</em>), implemented FreeBSD <code>tgammaf</code> precision routines, and audited PRX exports against upstream Python AST header integrity tests.</li>
+</ul>
+<hr>
+<h3>FEATURED GAME ENGINE & SYSTEMS PROJECTS</h3>
+<h4><strong>game-dev-labs</strong> — *Data-Oriented Game Engine Architecture Suite (C++17)*</h4>
+<ul>
+<li><strong>Sparse Set Entity Component System (ECS):</strong></li>
+<li>Built an ECS utilizing the <strong>Sparse Set</strong> data structure, guaranteeing $O(1)$ component addition, lookup, and swap-and-pop deletion while maintaining 100% cache-line saturation.</li>
+<li>Verified $O(1)$ defragmentation with zero virtual dynamic dispatch overhead in simulation loops; processes <strong>50,000 entities in <code>< 0.82ms</code></strong>.</li>
+<li>Authored <strong>ADR 0001: Sparse Sets vs. Contiguous Dense Arrays in ECS</strong>.</li>
+<li><strong>2D Physics Engine (SAT Rigid Body Dynamics):</strong></li>
+<li>Implemented the <strong>Separating Axis Theorem (SAT)</strong> for arbitrary convex polygons and circles, extracting Minimum Translation Vectors (MTV) for contact manifolds.</li>
+<li>Engineered an impulse-based momentum and angular rotation solver incorporating Coulomb friction and positional slop projection to prevent object sinking.</li>
+<li><strong>Procedural Generation & A\* Pathfinding:</strong></li>
+<li>Implemented Binary Space Partitioning (BSP) dungeon generation with $100\%$ topological room connectivity and 4-5 Cellular Automata cave smoothing.</li>
+<li>Built an optimized $A^*$ navigation solver with Octile/Manhattan distance heuristics and priority queue tie-breaking.</li>
+<li><strong>Deterministic Game Loop & FSM:</strong></li>
+<li>Implemented Glenn Fiedler’s fixed-timestep accumulator with state interpolation alpha ($\alpha$) to decouple physics execution from variable refresh rates.</li>
+</ul>
+<h4><strong>AnyPS5-Launcher</strong> — *Modern Desktop Launcher & Reverse Engineering Hub*</h4>
+<ul>
+<li>Developed a desktop launcher and executable analyzer for PS5 homebrew/relinked binaries, providing automated ELF header validation, PRX dependency resolution, and runtime controller mapping.</li>
+</ul>
+<hr>
+<h3>ENGINEERING DISCIPLINE & RELIABILITY</h3>
+<ul>
+<li><strong>Sanitizer-Driven CI:</strong> All C++ simulation code is validated on GitHub Actions across <strong>Ubuntu and Windows</strong> under <strong>AddressSanitizer (ASan)</strong> and <strong>UndefinedBehaviorSanitizer (UBSan)</strong>.</li>
+<li><strong>Memory Integrity:</strong> Validated zero memory leaks using Valgrind Memcheck (<code>0 bytes lost in 0 blocks</code>).</li>
+</ul>
+<hr>
+<h3>EDUCATION</h3>
+<ul>
+<li><strong>Bachelor of Engineering (B.E.) in Materials Science and Engineering</strong></li>
+<p class="sub-item">College of Engineering, Guindy (CEG), Anna University, Chennai</p>
+</ul>
+</body>
+</html>
