@@ -1,10 +1,10 @@
 # Nithishvelan M
 
-Junior security engineer building Python security tools, with a C++ and Linux systems background.
+Building security tools in Python and systems code in C++. Interested in cybersecurity, software engineering, and game development.
 
 ## What I'm looking for
 
-Junior application security, security analyst, or security-focused backend roles.
+Cybersecurity, software engineering, and game developer roles.
 
 Contact: <EMAIL> | <LINKEDIN URL> | <LOCATION>
 
@@ -24,10 +24,11 @@ Contact: <EMAIL> | <LINKEDIN URL> | <LOCATION>
 
 ## Other work
 
-- **[build-your-own-kafka](https://github.com/ErenYeager1836/build-your-own-kafka)**: Fork of the buildthingsuseful tutorial project that I fixed (Maven layout) and ran as a 3-broker cluster with partition replication and ZooKeeper coordination.
+- **[build-your-own-kafka](https://github.com/ErenYeager1836/build-your-own-kafka)**: Fork of the buildthingsuseful tutorial project that I fixed (Maven layout) and ran as a 3-broker cluster.
 
 ## Skills
 
 - **Languages:** Python, C++, Java
 - **Security:** OWASP Top 10, recon, secure auth
+- **Game dev:** C++
 - **Tools:** Git, Docker, GitHub Actions, Linux
