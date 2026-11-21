@@ -10,6 +10,8 @@ Contact: <EMAIL> | <LINKEDIN URL> | <LOCATION>
 
 ## Featured projects
 
+- **[minirun](https://github.com/ErenYeager1836/minirun)**: From-scratch Linux container runtime and eBPF active defense sandbox written in **Rust**.
+  Implements 6 Linux namespaces (rootless UID/GID mapping), Cgroups v2 resource quotas, pure-Rust Seccomp-BPF filtering with `clone3` fallback, and ring-buffered eBPF tracepoint telemetry that correlates socket stdio redirection and terminates the container via `cgroup.kill` within milliseconds of the stdio redirect. Verified with 10 Guard scenarios and 24 seccomp assertions.
 - **[secure-api](https://github.com/ErenYeager1836/secure-api)**: Hardened FastAPI notes API featuring Argon2id hashing, JWT authentication, rate limiting, and Dockerfile deployment.
   Includes a documented THREAT_MODEL.md, automated Bandit/flake8 security CI linting, and a 28-test pytest suite.
 - **[secret-scanner](https://github.com/ErenYeager1836/secret-scanner)**: Scans directories and git history for leaked secrets using regex rules plus Shannon entropy heuristics.
@@ -28,7 +30,7 @@ Contact: <EMAIL> | <LINKEDIN URL> | <LOCATION>
 
 ## Skills
 
-- **Languages:** Python, C++, Java
+- **Languages:** Python, C++, Rust, Java
 - **Security:** OWASP Top 10, recon, secure auth
 - **Game dev:** C++
 - **Tools:** Git, Docker, GitHub Actions, Linux
